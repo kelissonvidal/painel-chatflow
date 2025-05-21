@@ -1,14 +1,1 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head><meta charset="UTF-8"><title>Painel de Configuração</title><link rel="stylesheet" href="/static/style.css"></head>
-<body><div class="sidebar"><h2>☁️ ChatFlow</h2><a href="/login">⚙️ Configuração</a><a href="/audios">🔊 Gerenciar Áudios</a><a href="/ver_logs">📝 Ver Logs</a></div>
-<div class="main"><h1>Configuração da IA</h1><form method="POST" action="/salvar">
-<label>Saudação:</label><input type="text" name="saudacao" required>
-<label>Pergunta para nome:</label><input type="text" name="coleta_nome" required>
-<label>Resposta com nome:</label><input type="text" name="resposta_nome" required>
-<label>Pergunta sobre interesse:</label><textarea name="pergunta_interesse" required></textarea>
-<label>Pergunta sobre forma de pagamento:</label><textarea name="pergunta_pagamento" required></textarea>
-<label>Pergunta sobre tipo de pagamento:</label><textarea name="pergunta_forma" required></textarea>
-<label>Pergunta final antes do consultor:</label><textarea name="pergunta_info" required></textarea>
-<label>Mensagem de encerramento:</label><input type="text" name="encerramento" required>
-<button type="submit">Salvar Configuração</button></form></div></body></html>
+{{ form_content }}
