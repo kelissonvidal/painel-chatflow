@@ -1,1 +1,9 @@
-{{ css_content }}
+
+body { margin: 0; font-family: Arial, sans-serif; }
+.sidebar { width: 220px; background: #111; color: white; position: fixed; height: 100%; padding: 20px 10px; }
+.sidebar a { color: white; display: block; padding: 8px 12px; text-decoration: none; }
+.sidebar a:hover { background: #333; }
+.main { margin-left: 240px; padding: 20px; }
+label { display: block; margin-top: 15px; }
+input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
+button { margin-top: 20px; padding: 10px 20px; background: #444; color: white; border: none; cursor: pointer; }
