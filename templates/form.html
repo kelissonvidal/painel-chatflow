@@ -1,37 +1,20 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Configuração - ChatFlow</title>
-  <link rel="stylesheet" href="/static/style.css">
-</head>
+<head><meta charset="UTF-8"><title>Configuração</title><link rel="stylesheet" href="/static/style.css"></head>
 <body>
-<div class="sidebar">
-  <h2>☁️ ChatFlow</h2>
-  <a href="/login">⚙️ Configuração</a>
-  <a href="#">🔊 Áudios</a>
-  <a href="#">📝 Logs</a>
-</div>
+<div class="sidebar"><h2>☁️ ChatFlow</h2><a href="/login">⚙️ Configuração</a><a href="/audios">🔊 Áudios</a><a href="/ver_logs">📝 Logs</a></div>
 <div class="main">
   <h1>Configuração da IA</h1>
   <form method="POST" action="/salvar">
-    <label>Saudação:</label>
-    <input type="text" name="saudacao" value="{{ dados.get('saudacao', '') }}" required>
-    <label>Pergunta para nome:</label>
-    <input type="text" name="coleta_nome" value="{{ dados.get('coleta_nome', '') }}" required>
-    <label>Resposta com nome:</label>
-    <input type="text" name="resposta_nome" value="{{ dados.get('resposta_nome', '') }}" required>
-    <label>Pergunta sobre interesse:</label>
-    <textarea name="pergunta_interesse">{{ dados.get('pergunta_interesse', '') }}</textarea>
-    <label>Pergunta sobre forma de pagamento:</label>
-    <textarea name="pergunta_pagamento">{{ dados.get('pergunta_pagamento', '') }}</textarea>
-    <label>Pergunta sobre tipo de pagamento:</label>
-    <textarea name="pergunta_forma">{{ dados.get('pergunta_forma', '') }}</textarea>
-    <label>Pergunta final antes do consultor:</label>
-    <textarea name="pergunta_info">{{ dados.get('pergunta_info', '') }}</textarea>
-    <label>Mensagem de encerramento:</label>
-    <input type="text" name="encerramento" value="{{ dados.get('encerramento', '') }}" required>
+    <label>Saudação:</label><input type="text" name="saudacao" value="{{ dados.get('saudacao', '') }}">
+    <label>Pergunta para nome:</label><input type="text" name="coleta_nome" value="{{ dados.get('coleta_nome', '') }}">
+    <label>Resposta com nome:</label><input type="text" name="resposta_nome" value="{{ dados.get('resposta_nome', '') }}">
+    <label>Pergunta sobre interesse:</label><textarea name="pergunta_interesse">{{ dados.get('pergunta_interesse', '') }}</textarea>
+    <label>Pergunta sobre forma de pagamento:</label><textarea name="pergunta_pagamento">{{ dados.get('pergunta_pagamento', '') }}</textarea>
+    <label>Pergunta sobre tipo de pagamento:</label><textarea name="pergunta_forma">{{ dados.get('pergunta_forma', '') }}</textarea>
+    <label>Pergunta final antes do consultor:</label><textarea name="pergunta_info">{{ dados.get('pergunta_info', '') }}</textarea>
+    <label>Mensagem de encerramento:</label><input type="text" name="encerramento" value="{{ dados.get('encerramento', '') }}">
     <button type="submit">Salvar Configuração</button>
   </form>
 </div>
