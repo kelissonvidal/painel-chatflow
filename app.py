@@ -25,6 +25,15 @@ def login():
     dados, _ = get_config()
     return render_template("form.html", dados=dados)
 
+@app.route("/audios")
+def audios():
+    return render_template("audios.html")
+
+@app.route("/ver_logs")
+def logs():
+    dados, _ = get_config()
+    return render_template("logs.html", logs=json.dumps(dados, indent=2, ensure_ascii=False))
+
 @app.route("/salvar", methods=["POST"])
 def salvar():
     novo = {
@@ -49,6 +58,6 @@ def salvar():
     url = f"https://api.github.com/repos/{REPO}/contents/config.json"
     res = requests.put(url, headers=HEADERS, json=payload)
     if res.status_code in [200, 201]:
-        return "<h3>✅ Configuração atualizada no GitHub! <a href='/login'>Voltar</a></h3>"
+        return render_template("salvo.html")
     else:
         return f"<h3>❌ Erro ao salvar: {res.status_code}<br>{res.text}</h3>"
